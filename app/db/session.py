@@ -3,7 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import OperationalError
 
-DATABASE_URL = "mysql+mysqlconnector://ubuntu:123456@localhost:3306/mydb"
+DATABASE_URL = "mysql+mysqlconnector://root:@localhost:3306/mydb"
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
